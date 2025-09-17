@@ -22,8 +22,8 @@ create table funciones_usuario(
 	id_pelicula int,
 	horario varchar(150),
 	asientos varchar(10),
-	foreign key (id_usuario) references usuarios(id),
-	foreign key (id_pelicula) references funciones(id_pelicula)
+	foreign key (id_usuario) references usuarios(id) on delete cascade,
+	foreign key (id_pelicula) references funciones(id_pelicula) on delete cascade
 );
 
 insert into funciones 
